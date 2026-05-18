@@ -1,22 +1,22 @@
 /* ============================================================
    TIRTH SHAH — PORTFOLIO
-   Aesthetic: Editorial operator. Dark, warm, precise.
+   Aesthetic: Editorial operator. Light, warm, precise.
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:wght@300;400;500&display=swap');
 
 /* ── TOKENS ── */
 :root {
-  --bg: #0c0b09;
-  --bg-2: #131210;
-  --bg-3: #1a1915;
-  --text: #f0ead8;
-  --text-dim: #8a8472;
-  --text-dimmer: #4a4640;
-  --accent: #c8f04a;
-  --accent-dim: #8aaa2e;
-  --border: rgba(240, 234, 216, 0.08);
-  --border-mid: rgba(240, 234, 216, 0.14);
+  --bg: #f8f7f4;
+  --bg-2: #f1f0ec;
+  --bg-3: #e9e7e2;
+  --text: #1a1815;
+  --text-dim: #5c5a56;
+  --text-dimmer: #a09e9a;
+  --accent: #2b6be0;
+  --accent-dim: #1d52b8;
+  --border: rgba(26, 24, 21, 0.08);
+  --border-mid: rgba(26, 24, 21, 0.14);
 
   --font-display: 'Playfair Display', Georgia, serif;
   --font-mono: 'DM Mono', 'Courier New', monospace;
@@ -565,7 +565,7 @@ body::before {
 
 .bet-status-dot.live {
   background: var(--accent);
-  box-shadow: 0 0 0 3px rgba(200, 240, 74, 0.15);
+  box-shadow: 0 0 0 3px rgba(43, 107, 224, 0.18);
 }
 
 .bet-link {
@@ -740,7 +740,7 @@ body::before {
 }
 
 .btn-primary:hover {
-  background: #d8ff60;
+  background: #4d7fe8;
   transform: translateY(-1px);
 }
 
@@ -932,7 +932,7 @@ body::before {
     transform: translateX(-100%);
     width: 260px;
     transition: transform 0.35s var(--ease);
-    box-shadow: 4px 0 40px rgba(0,0,0,0.5);
+    box-shadow: 4px 0 40px rgba(0,0,0,0.12);
   }
 
   .site-nav.open {
