@@ -7,9 +7,30 @@
   <meta name="description" content="Tirth Shah's museum of failures. Projects started, lessons learned, no regrets." />
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* Graveyard-specific overrides */
-    .page-tag { color: var(--text-dimmer); }
-    .page-title em { color: var(--text-dimmer); }
+    .grave-card.starred {
+      border-color: rgba(200, 240, 74, 0.2);
+    }
+    .grave-card.starred:hover {
+      border-color: rgba(200, 240, 74, 0.4);
+    }
+    .star-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+    .grave-card.starred .grave-title {
+      text-decoration: none;
+      color: var(--text);
+    }
+    .grave-card.starred .grave-cause {
+      color: var(--accent);
+    }
   </style>
 </head>
 <body>
@@ -24,14 +45,15 @@
       <span class="nav-logo__role">Founding Operator</span>
     </div>
     <ul class="nav-links" role="list">
-      <li><a href="index.html"><span class="nav-num">00</span> Home</a></li>
-      <li><a href="work.html"><span class="nav-num">01</span> Work</a></li>
-      <li><a href="bets.html"><span class="nav-num">02</span> Sidequests</a></li>
-      <li><a href="graveyard.html"><span class="nav-num">03</span> Graveyard</a></li>
-      <li><a href="now.html"><span class="nav-num">04</span> Now</a></li>
+      <li><a href="index.html"><span class="nav-num">01</span> Home</a></li>
+      <li><a href="work.html"><span class="nav-num">02</span> Work</a></li>
+      <li><a href="bets.html"><span class="nav-num">03</span> Bets</a></li>
+      <li><a href="graveyard.html"><span class="nav-num">04</span> Graveyard</a></li>
+      <li><a href="now.html"><span class="nav-num">05</span> What's next?</a></li>
     </ul>
     <div class="nav-footer">
-      Remote (Global)<br /><br />
+      Mumbai, India<br />
+      Open to remote<br /><br />
       <a href="mailto:tirthshah02@gmail.com">tirthshah02@gmail.com</a>
     </div>
   </nav>
@@ -39,132 +61,132 @@
   <main class="site-main">
 
     <header class="page-header fade-up fade-up-1">
-      <div class="page-chapter" aria-hidden="true">03</div>
+      <div class="page-chapter" aria-hidden="true">04</div>
       <p class="page-tag">Museum of failures</p>
-      <h1 class="page-title">Things that <em>didn't make it.</em></h1>
+      <h1 class="page-title">Things that<br /><em>didn't make it.</em></h1>
       <p class="page-subtitle">
-        Every experiment that didn't work is a decision I made, a lesson I kept, 
-        and proof that I actually ship things instead of just planning them. 
-        I'm not embarrassed by any of this.
+        I try a lot of things. Some stick, most don't. Here are some cool things I've started
+        and then pulled the plug on, and a little bit about them.
       </p>
     </header>
 
-    <!-- ── INTRO CARD ── -->
-    <section class="section fade-up fade-up-2">
-      <div class="card" style="max-width: 640px; margin-bottom: 48px;">
-        <p class="card-tag">Why this page exists</p>
-        <p class="card-body" style="color: var(--text); font-size: 1rem; line-height: 1.8;">
-          Most portfolios only show the wins. That's a distorted picture. The real signal 
-          is whether you tried things, learned from them, and kept going. 
-          I've killed more experiments than I've shipped — which means I've run a lot of experiments. 
-          Here are the ones worth memorializing.
-        </p>
-      </div>
-    </section>
-
     <!-- ── GRAVES ── -->
-    <section class="section fade-up fade-up-3">
-      <p class="section-label">Departed experiments</p>
+    <section class="section fade-up fade-up-2">
 
       <div class="grave-grid">
 
+        <!-- Better Butter -->
         <div class="grave-card">
-          <p class="grave-rip">R.I.P. · <span>[20XX]</span></p>
-          <h3 class="grave-title">[Project name]</h3>
-          <p class="grave-cause">Killed by: Wrong problem</p>
+          <h3 class="grave-title">Better Butter</h3>
+          <p class="grave-cause">Killed by: The food industry is unforgiving</p>
           <p class="grave-body">
-            [PLACEHOLDER] 2–3 honest sentences about what this was, what you built, 
-            and why it died. No softening — what actually went wrong. 
-            Was it the market, the timing, your own assumptions?
+            Flavoured compound butters: pesto parmesan, Kashmiri chilli, lemon garlic,
+            cinnamon, espresso. A D2C food brand that would give home cooks an instant
+            flavour upgrade. I designed the packaging, spoke to chefs and butter suppliers,
+            figured out production requirements, and made samples at home.
           </p>
-          <p class="grave-epitaph">
-            "What I actually learned: [one sharp sentence]"
+          <p class="grave-body" style="margin-top: 10px;">
+            People loved it. Pesto was the runaway favourite. Everyone said they'd buy it.
+            Then reality hit: FSSAI approvals, food quality testing, cold chain logistics,
+            production minimums, all of it at once, in my first year of work, with no
+            food industry experience whatsoever. Pulled the plug. Still think about it.
           </p>
         </div>
 
+        <!-- The Book Project -->
         <div class="grave-card">
-          <p class="grave-rip">R.I.P. · <span>[20XX]</span></p>
-          <h3 class="grave-title">[Project name]</h3>
-          <p class="grave-cause">Killed by: Ran out of conviction</p>
+          <h3 class="grave-title">The Book Project*</h3>
+          <p class="grave-cause">Status: Half-buried, fully alive</p>
           <p class="grave-body">
-            [PLACEHOLDER] This one stings a little more. You built something, it had some 
-            traction or promise, but you stopped. What was the real reason — 
-            not the polished answer, the honest one.
+            I love stories. So I started giving blank books to strangers with one instruction:
+            write a story, anything at all, then pass the book to another stranger.
+            My contact details are on the back cover. The hope: one day a filled book finds
+            its way home and I get to read everything inside.
           </p>
-          <p class="grave-epitaph">
-            "What I actually learned: [one sharp sentence]"
+          <p class="grave-body" style="margin-top: 10px;">
+            30-odd books are out in the world. None have come back yet. I'm still friends
+            with a couple of the strangers I gave books to myself. It's not a business.
+            It never was. It's just something I believe in: that strangers have stories
+            worth sharing, and the smallest nudge is sometimes enough to get them out.
+          </p>
+          <p style="margin-top: 14px; font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.06em; color: var(--text-dimmer);">* not dead. just resting.</p>
+        </div>
+
+        <!-- SideQuest -->
+        <div class="grave-card">
+          <h3 class="grave-title">SideQuest</h3>
+          <p class="grave-cause">Killed by: Life got in the way. Will return.</p>
+          <p class="grave-body">
+            Everyone's building apps to help you meet new strangers. Nobody's building
+            one to help you stay close to the friends you already have. That was the gap
+            SideQuest was trying to fill.
+          </p>
+          <p class="grave-body" style="margin-top: 10px;">
+            The idea: a group app where one random friend gets a daily "side quest",
+            give a compliment to a stranger, try a weird snack, do something small and
+            unusual, then posts a photo or video for the group. No pressure, just a reason
+            to share something with the people you love but keep forgetting to call.
+            Got to early design exploration on Lovable before my job became all-consuming.
+            The insight is still good. The app is still unbuilt. Someday.
           </p>
         </div>
 
+        <!-- Mini Golf -->
         <div class="grave-card">
-          <p class="grave-rip">R.I.P. · <span>[20XX]</span></p>
-          <h3 class="grave-title">[Project name]</h3>
-          <p class="grave-cause">Killed by: Wrong timing</p>
+          <h3 class="grave-title">Mini Golf India</h3>
+          <p class="grave-cause">Killed by: Capital requirements I couldn't meet</p>
           <p class="grave-body">
-            [PLACEHOLDER] The idea was right, the timing was wrong, or vice versa. 
-            What did you learn about sequencing, about markets, about what "early" actually means. 
+            Post-COVID, I watched people spend more on experiences than ever before:
+            concerts, dining, activities. India had bowling alleys and arcades, but no
+            mini golf. Golf as a sport is inaccessible to most Indians. Mini golf isn't.
+            It's affordable, it's social, it's fun for everyone.
           </p>
-          <p class="grave-epitaph">
-            "What I actually learned: [one sharp sentence]"
+          <p class="grave-body" style="margin-top: 10px;">
+            I spoke to venues about rent, got rough build-out estimates, planned the space.
+            The numbers were far beyond what I could raise at the time. Shelved, not because
+            the idea was wrong, but because the cheque size was right and I wasn't.
+            I still think someone should build this.
           </p>
         </div>
 
+        <!-- Rage Cage -->
         <div class="grave-card">
-          <p class="grave-rip">R.I.P. · <span>[20XX]</span></p>
-          <h3 class="grave-title">[Feature / experiment that failed]</h3>
-          <p class="grave-cause">Killed by: Wrong assumptions</p>
+          <h3 class="grave-title">Rage Cage</h3>
+          <p class="grave-cause">Killed by: Unit economics that don't work</p>
           <p class="grave-body">
-            [PLACEHOLDER] Not every failure is a project — sometimes it's a feature 
-            you pushed for at work that bombed, a growth experiment that didn't move anything, 
-            a process you designed that nobody used. Those count too.
+            A space where you pay to go break things: smash plates, shatter bottles,
+            destroy furniture. Cathartic, experiential, novel. Started as a college
+            business project. While I was still planning it, someone else launched it
+            and went on Shark Tank India.
           </p>
-          <p class="grave-epitaph">
-            "What I actually learned: [one sharp sentence]"
+          <p class="grave-body" style="margin-top: 10px;">
+            My initial reaction: gutted. Then I did a proper deep dive into the economics.
+            Cost of breakable inventory vs. what people will actually pay, safety
+            infrastructure requirements, space constraints, scalability ceiling.
+            The conclusion: the idea is more fun to imagine than to run.
+            I was glad I hadn't gone further.
           </p>
         </div>
 
+        <!-- Dropshipping -->
         <div class="grave-card">
-          <p class="grave-rip">R.I.P. · <span>[20XX]</span></p>
-          <h3 class="grave-title">[Project name]</h3>
-          <p class="grave-cause">Killed by: Solved the wrong thing</p>
+          <h3 class="grave-title">EaseYourAche</h3>
+          <p class="grave-cause">Killed by: Naivety. Necessary naivety.</p>
           <p class="grave-body">
-            [PLACEHOLDER] Built the product, nailed the execution, missed the point. 
-            What did users actually want vs. what you built. 
-            How did you discover the gap and what changed after.
+            College. Trying to make some side income. Picked a niche: pain relief products,
+            neck pillows, compression socks, ice packs, and tried to dropship from
+            Chinese and Indian suppliers to customers globally. The domain was easeyourache.com.
+            Learned a little about Meta ads. Made zero sales.
           </p>
-          <p class="grave-epitaph">
-            "What I actually learned: [one sharp sentence]"
-          </p>
-        </div>
-
-        <div class="grave-card">
-          <p class="grave-rip">R.I.P. · <span>[20XX]</span></p>
-          <h3 class="grave-title">[Add your own]</h3>
-          <p class="grave-cause">Killed by: [Your honest answer]</p>
-          <p class="grave-body">
-            [PLACEHOLDER] Add as many as you have real things to say about. 
-            One good graveyard entry is worth more than five polished case studies.
-          </p>
-          <p class="grave-epitaph">
-            "What I actually learned: [one sharp sentence]"
+          <p class="grave-body" style="margin-top: 10px;">
+            I was naive. I knew I was naive. I did it anyway, which is the only part
+            I'd repeat. You learn faster from a dead store than from a course about dropshipping.
           </p>
         </div>
 
       </div>
     </section>
 
-    <!-- ── CLOSING ── -->
-    <section class="section fade-up fade-up-4">
-      <div class="card" style="max-width: 640px; background: transparent; border-color: var(--border);">
-        <p class="card-body" style="color: var(--text-dim); font-size: 0.95rem; line-height: 1.8; font-family: var(--font-display); font-style: italic;">
-          "The only experiments that truly fail are the ones you don't run 
-          because you're afraid of what you'll find out."
-        </p>
-        <p style="margin-top: 12px; font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dimmer);">
-          — Something I'm still learning
-        </p>
-      </div>
-    </section>
 
   </main>
 </div>
