@@ -5,15 +5,11 @@
 
   // ── Active nav link ──
   const links = document.querySelectorAll('.nav-links a');
-  const current = window.location.pathname.split('/').pop() || 'index.html';
+  const current = (window.location.pathname.split('/').pop() || 'index').replace(/\.html$/, '');
 
   links.forEach(link => {
-    const href = link.getAttribute('href');
-    if (
-      href === current ||
-      (current === '' && href === 'index.html') ||
-      (current === 'index.html' && href === 'index.html')
-    ) {
+    const href = link.getAttribute('href').replace(/\.html$/, '');
+    if (href === current || (current === '' && href === 'index')) {
       link.classList.add('active');
     }
   });
