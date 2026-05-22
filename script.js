@@ -21,28 +21,26 @@
   // ── Mobile nav toggle ──
   const toggle = document.querySelector('.mobile-nav-toggle');
   const nav = document.querySelector('.site-nav');
+  const backdrop = document.querySelector('.nav-backdrop');
+
+  function closeNav() {
+    nav.classList.remove('open');
+    backdrop && backdrop.classList.remove('open');
+    toggle.textContent = 'Menu';
+  }
 
   if (toggle && nav) {
     toggle.addEventListener('click', () => {
       const open = nav.classList.toggle('open');
+      backdrop && backdrop.classList.toggle('open', open);
       toggle.textContent = open ? 'Close' : 'Menu';
     });
 
-    // Close on link click
     nav.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        nav.classList.remove('open');
-        toggle.textContent = 'Menu';
-      });
+      a.addEventListener('click', closeNav);
     });
 
-    // Close on outside click
-    document.addEventListener('click', (e) => {
-      if (!nav.contains(e.target) && !toggle.contains(e.target)) {
-        nav.classList.remove('open');
-        toggle.textContent = 'Menu';
-      }
-    });
+    backdrop && backdrop.addEventListener('click', closeNav);
   }
 
   // ── Scroll-reveal ──

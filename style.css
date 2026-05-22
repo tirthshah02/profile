@@ -127,19 +127,23 @@ body::before {
   min-width: 14px;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
+.nav-links a:hover {
   color: var(--text);
   background: var(--bg-3);
 }
 
-.nav-links a.active .nav-num,
 .nav-links a:hover .nav-num {
   color: var(--accent);
 }
 
 .nav-links a.active {
-  color: var(--text);
+  color: var(--accent);
+  background: rgba(43, 107, 224, 0.1);
+  border: 1px solid rgba(43, 107, 224, 0.18);
+}
+
+.nav-links a.active .nav-num {
+  color: var(--accent);
 }
 
 .nav-links a.active::before {
@@ -949,6 +953,25 @@ body::before {
   cursor: pointer;
 }
 
+.nav-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 24, 21, 0.45);
+  z-index: 99;
+  opacity: 0;
+  transition: opacity 0.3s var(--ease);
+}
+
+.nav-backdrop.open {
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .nav-backdrop { display: block; pointer-events: none; }
+  .nav-backdrop.open { pointer-events: auto; }
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   :root { --nav-w: 0px; }
@@ -1000,6 +1023,7 @@ body::before {
 
   .hero-top__right {
     order: 2;
+    min-height: 300px;
   }
 
   .hero-top__left {
@@ -1007,7 +1031,10 @@ body::before {
   }
 
   .hero-photo {
-    height: 280px;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    inset: auto;
   }
 }
 
@@ -1015,5 +1042,29 @@ body::before {
   .site-main { padding: 56px 20px 48px; }
   .bets-grid, .grave-grid, .card-grid { grid-template-columns: 1fr; }
   .stat-row { gap: 28px; }
-  .hero-credentials { gap: 28px; }
+  .hero-credentials { gap: 24px; margin-top: 48px; }
+
+  .card, .bet-card, .grave-card, .now-block { padding: 24px; }
+
+  .hero-headline { font-size: 1.9rem; }
+  .hero-body { font-size: 0.95rem; }
+
+  .page-chapter { display: none; }
+
+  .timeline-role { font-size: 1.3rem; }
+  .timeline-item { padding: 28px 0; }
+
+  .credential__value { font-size: 0.88rem; }
+  .hero-credentials { padding-top: 28px; }
+
+  .page-header { margin-bottom: 48px; padding-bottom: 32px; }
+}
+
+@media (max-width: 400px) {
+  .site-main { padding: 56px 14px 40px; }
+  .hero-headline { font-size: 1.65rem; }
+  .stat__value { font-size: 2rem; }
+  .card, .bet-card, .grave-card, .now-block { padding: 20px; }
+  .hero-photo { height: 240px; }
+  .btn { padding: 11px 18px; font-size: 0.65rem; }
 }
