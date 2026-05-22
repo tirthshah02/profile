@@ -3,17 +3,6 @@
 (function () {
   'use strict';
 
-  // ── Active nav link ──
-  const links = document.querySelectorAll('.nav-links a');
-  const current = (window.location.pathname.split('/').pop() || 'index').replace(/\.html$/, '');
-
-  links.forEach(link => {
-    const href = link.getAttribute('href').replace(/\.html$/, '');
-    if (href === current || (current === '' && href === 'index')) {
-      link.classList.add('active');
-    }
-  });
-
   // ── Mobile nav toggle ──
   const toggle = document.querySelector('.mobile-nav-toggle');
   const nav = document.querySelector('.site-nav');
