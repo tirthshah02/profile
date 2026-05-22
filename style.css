@@ -111,12 +111,13 @@ body::before {
   gap: 10px;
   padding: 9px 12px;
   border-radius: 4px;
+  border: 1px solid transparent;
   font-family: var(--font-mono);
   font-size: 0.72rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--text-dim);
-  transition: color 0.2s var(--ease), background 0.2s var(--ease);
+  transition: color 0.2s var(--ease), background 0.2s var(--ease), border-color 0.2s var(--ease);
   position: relative;
 }
 
@@ -138,8 +139,8 @@ body::before {
 
 .nav-links a.active {
   color: var(--accent);
-  background: rgba(43, 107, 224, 0.1);
-  border: 1px solid rgba(43, 107, 224, 0.18);
+  background: rgba(43, 107, 224, 0.14);
+  border-color: rgba(43, 107, 224, 0.28);
 }
 
 .nav-links a.active .nav-num {
